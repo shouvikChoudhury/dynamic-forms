@@ -36,7 +36,6 @@ function App() {
       }
       setElements(newElements)
     });
-    console.log(elements)
   }
 
   const handleAddField = (e) => {
@@ -58,7 +57,7 @@ function App() {
     <FormContext.Provider value={{ handleChange }}>
       <div className="App container">
         <h3>{page_label}</h3>
-        <button onClick={handleAddField}>Add new form field</button>
+        <button onClick={handleAddField}>Add new input field</button>
         <form>
           {fields ? fields.map((field, i) => <Element key={i} field={field} />) : null}
 

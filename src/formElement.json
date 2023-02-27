@@ -43,7 +43,7 @@
                 "field_id": "driving_license",
                 "field_label": "I confirm to have driving license.",
                 "field_type": "checkbox",
-                "field_value": "checked"
+                "field_value": true
             }
         ]
     }
