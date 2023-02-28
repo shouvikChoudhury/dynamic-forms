@@ -15,7 +15,8 @@
                 "field_label": "Email",
                 "field_mandatory": "yes",
                 "field_placeholder": "Enter email",
-                "field_type": "text"
+                "field_type": "text",
+                "field_value": ""
             },
             {
                 "field_id": "employment",
