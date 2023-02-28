@@ -35,9 +35,9 @@
             },
             {
                 "field_id": "driving_license",
-                "field_label": "I confirm to have driving license.",
+                "field_label": "I confirm to have provided all correct details.",
                 "field_type": "checkbox",
-                "field_value": true
+                "field_value": false
             }
         ]
     }

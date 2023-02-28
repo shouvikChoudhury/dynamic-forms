@@ -4,20 +4,31 @@ import Element from './components/Element';
 import { FormContext } from './FormContext';
 
 function App() {
-  const [elements, setElements] = useState(null);
+  const [elements, setElements] = useState(null)
+
   useEffect(() => {
     setElements(formJSON[0])
-
   }, [])
 
+
   const [first, setfirst] = useState(1)
+
+  const [error, seterror] = useState(false)
 
   const { fields, page_label } = elements ?? {}
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault()
+    let count = 0
+    elements.fields.forEach(field => {
+      if (field.field_value == "") count++
+    })
+    if (count > 0) seterror(true)
+    else seterror(false)
+
     console.log(elements)
   }
+
   const handleChange = (id, event) => {
     const newElements = { ...elements }
     newElements.fields.forEach(field => {
@@ -34,7 +45,7 @@ function App() {
         }
       }
       setElements(newElements)
-    });
+    })
   }
 
   const handleInputField = () => {
@@ -104,6 +115,7 @@ function App() {
           <button onClick={handleSelectField}>Add new select dropdown</button>
           <button onClick={handleCheckField}>Add new check box</button>
         </div>
+        {error && <i>Fields cannot be left empty!!</i>}
         <form>
           {fields ? fields.map((field, i) => {
             return <div key={i}><Element field={field} />
