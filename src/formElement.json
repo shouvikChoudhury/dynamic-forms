@@ -20,7 +20,7 @@
             {
                 "field_id": "employment",
                 "field_label": "Employment desired",
-                "field_value": "Part-Time",
+                "field_value": "",
                 "field_mandatory": "yes",
                 "field_options": [
                     {
@@ -31,13 +31,6 @@
                     }
                 ],
                 "field_type": "select"
-            },
-            {
-                "field_id": "identity",
-                "field_label": "Driving License No.",
-                "field_mandatory": "yes",
-                "field_placeholder": "e.g. 012 345 678",
-                "field_type": "text"
             },
             {
                 "field_id": "driving_license",

@@ -12,6 +12,7 @@ const Input = ({ field_id, field_label, field_placeholder, field_value }) => {
                 onChange={event => handleChange(field_id, event)}
             />
             <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+
         </div>
     )
 }
