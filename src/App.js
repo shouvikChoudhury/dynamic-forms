@@ -115,13 +115,13 @@ function App() {
           <button onClick={handleSelectField}>Add new select dropdown</button>
           <button onClick={handleCheckField}>Add new check box</button>
         </div>
-        {error && <i>Fields cannot be left empty!!</i>}
+
         <form>
           {fields ? fields.map((field, i) => {
             return <div key={i}><Element field={field} />
               <button className='mb-5' onClick={(e) => handleDelete(e, field.field_id)}>Delete</button></div>
           }) : null}
-
+          {error && <i className='text-danger'>Fields cannot be left empty, Please fill the complete form to submit successfully. </i>}
           <button type="submit" className="btn btn-primary mt-3" onClick={(e) => handleSubmit(e)}>Submit</button>
         </form>
 
